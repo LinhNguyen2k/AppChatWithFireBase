@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "914823728570",
+    "firebase_url": "https://whatsappchat-60ac0-default-rtdb.firebaseio.com",
+    "project_id": "whatsappchat-60ac0",
+    "storage_bucket": "whatsappchat-60ac0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914823728570:android:a18fbe95628e7666c1e183",
+        "android_client_info": {
+          "package_name": "com.example.appchatfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914823728570-guecad6hilhl10u4he9r1u55f4sgbhee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApeWDAv53Q2RdLC9PFHQPXGpK1CyHq6T0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914823728570-guecad6hilhl10u4he9r1u55f4sgbhee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914823728570:android:36ae732038ca7c96c1e183",
+        "android_client_info": {
+          "package_name": "com.example.appchatwithfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914823728570-guecad6hilhl10u4he9r1u55f4sgbhee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApeWDAv53Q2RdLC9PFHQPXGpK1CyHq6T0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914823728570-guecad6hilhl10u4he9r1u55f4sgbhee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914823728570:android:5ece845f391fd774c1e183",
+        "android_client_info": {
+          "package_name": "com.example.whatsappchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914823728570-guecad6hilhl10u4he9r1u55f4sgbhee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApeWDAv53Q2RdLC9PFHQPXGpK1CyHq6T0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914823728570-guecad6hilhl10u4he9r1u55f4sgbhee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
