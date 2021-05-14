@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.appchatfirebase.Fragment.ChatsFragment;
+import com.example.appchatfirebase.Fragment.ProFileFragment;
 import com.example.appchatfirebase.Fragment.UsersFragment;
 import com.example.appchatfirebase.Model.User;
 import com.google.android.material.tabs.TabLayout;
@@ -30,6 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPageAdapter.addFragment(new ChatsFragment(),"Chats");
         viewPageAdapter.addFragment(new UsersFragment(),"Users");
+        viewPageAdapter.addFragment(new ProFileFragment(), "Profile");
         viewPager.setAdapter(viewPageAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
@@ -95,8 +98,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(MainActivity.this,StartActivity.class));
-                finish();
+                //change this code because your app will crash
+                startActivity(new Intent(MainActivity.this,StartActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+
                 return true;
 
         }
@@ -134,5 +138,25 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return titles.get(position);
         }
+    }
+    private void status(String status){
+        reference = FirebaseDatabase.getInstance().getReference("status").child(firebaseUser.getUid());
+
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("status",status);
+
+        reference.updateChildren(hashMap);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        status("online");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        status("offline");
     }
 }
